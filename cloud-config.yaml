@@ -1,0 +1,17 @@
+ssh_authorized_keys:
+- ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABAQCw+hbW9064tkhWAIujS6ZdaujY7eVRMVelPItxMmyz4H9AcR+pKpVu04Fpo3E0FN/GJifGxEKM8KobSjY3pmULi28AmH7hPnUapiMjjA3RsksYGO79Q5YIRk1j5m0rzlzFgnpEessBqZXOOKULvsrtjCum+vzrRuJOS0/NDChY1DEIKVnUUL3AMRWvOwNhkHTz6GOY/R2pL+yuK6ModjcJTlxBw8tzUBVTyMzorhHrc+GlLgmDScsK4qnNCIOP1g4MOHaEe0GyyTZJzV52ZWkuAFLgp2jgmivRjid5mma1f3g9kK41693tkp8KyZkyFpaRLfYpj95kGiB/EEjRoMul raghu@mint-pcq
+- "github:raghubuilds"
+hostname: k3os-master-1
+k3os:
+  modules:
+  - kvm
+  - nvme
+  dns_nameservers:
+  - 8.8.8.8
+  - 1.1.1.1
+  server_url: https://192.168.0.5:6443
+  token: test@1234
+  k3s_args:
+  - server
+  - "--cluster-cidr=192.168.0.0/16"
+  - "--flannel-backend=none"
